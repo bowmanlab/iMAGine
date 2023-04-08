@@ -9,6 +9,7 @@ helpFunction()
    echo -e "\t-R read 2"
    echo -e "\t-s name of the sample (modifier) given to intermediated files"
    echo -e "\t-h help"
+   echo -e "Modify MEMORY and CPU variables in imagine.sh as appropriate"
    exit 1 # Exit script after printing help
 }
 
@@ -31,6 +32,8 @@ START=$(date +%s)
 #name=Aluwihare_DNA6
 
 ### running ###
+
+##
 
 MEMORY=1000
 CPUS=64
