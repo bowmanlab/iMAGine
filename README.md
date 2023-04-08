@@ -29,6 +29,18 @@ Most of the tools have their own set of installation protocols and dependencies.
 ./dependency-check.sh
 ```
 
+## Using conda
+
+You can install all of the dependencies of the dependecies from imagine.yml. You'll still need to install the specific dependencies listed above.
+
+```
+conda env create -f imagine.yml
+```
+Then, to enter the environment:
+```
+conda activate imagine
+```
+
 ## Using docker image (still under testing)
 
 ```
