@@ -25,6 +25,10 @@ done
 
 START=$(date +%s)
 
+### user setable variables ###
+
+kraken_database=/data_store/kraken_database
+
 ### testing ###
 
 #read1=/data_store/seq_data/ucsd_microbiome_20230214/Aluwihare_DNA6_S10_L001_R1_001.fastq.gz
@@ -54,6 +58,10 @@ quast.py metaspades_output_${name}/contigs.fasta -o quast_output_${name} &&
 mkdir binning_${name} &&
 
 cp metaspades_output_${name}/contigs.fasta binning_${name} &&
+
+kraken2 -db ${kraken_database} --threads 64 metaspades_output_${name}/contigs.fasta > metaspades_output_${name}/${name}_contigs_kraken.txt
+
+ktImportTaxonomy -t 5 -m 3 -o metaspades_output_${name}/${name}_krona.html metaspades_output_${name}/${name}_contigs_kraken.txt
 
 cd binning_${name} &&
 
