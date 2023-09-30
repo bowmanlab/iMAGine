@@ -2,7 +2,7 @@
 
 **iMAGine** is a metagenomic workflow which includes filtering, assembling, and binning.
 
-This workflow includes the following tools which are needed to be installed in the system.
+This workflow includes the following tools which need to be installed in the system.
 
 1. [fastp](https://github.com/OpenGene/fastp)
 2. [spades assembler](https://github.com/ablab/spades)
@@ -11,7 +11,9 @@ This workflow includes the following tools which are needed to be installed in t
 5. [samtools](https://github.com/samtools/samtools)
 6. [metabat2](https://bitbucket.org/berkeleylab/metabat/src/master/)
 7. [CheckM](https://github.com/Ecogenomics/CheckM)
-
+8. [kraken2](https://github.com/DerrickWood/kraken2)
+9. [krona](https://github.com/marbl/Krona)
+    
 ## Downloading 
 
 You can get the latest stable release [here](https://github.com/avishekdutta14/iMAGine/releases).
