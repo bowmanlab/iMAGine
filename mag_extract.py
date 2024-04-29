@@ -45,7 +45,7 @@ args = parser.parse_args()
 
 df = pd.DataFrame()
 
-with open('bin_stats_ext.tsv', 'r') as f:
+with open('checkm/storage/bin_stats_ext.tsv', 'r') as f:
     for line in f.readlines():
         line = line.split('\t')
         d = ast.literal_eval(line[1])
